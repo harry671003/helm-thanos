@@ -1,11 +1,13 @@
-# Prometheus
+*Note: This package is copied from https://github.com/helm/charts/tree/master/stable/prometheus*
+
+# Prometheus + Thanos
 
 [Prometheus](https://prometheus.io/), a [Cloud Native Computing Foundation](https://cncf.io/) project, is a systems and service monitoring system. It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true.
 
 ## TL;DR;
 
 ```console
-$ helm install stable/prometheus
+$ helm install --namespace="prometheus"  prometheus .
 ```
 
 ## Introduction
@@ -21,7 +23,7 @@ This chart bootstraps a [Prometheus](https://prometheus.io/) deployment on a [Ku
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release stable/prometheus
+$ helm install --namespace="prometheus"  prometheus .
 ```
 
 The command deploys Prometheus on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -33,7 +35,7 @@ The command deploys Prometheus on the Kubernetes cluster in the default configur
 To uninstall/delete the `my-release` deployment:
 
 ```console
-$ helm delete my-release
+$ helm delete --namespace="prometheus"  prometheus
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
